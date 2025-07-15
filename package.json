@@ -1,0 +1,23 @@
+{
+  "name": "personal-project",
+  "version": "1.0.0",
+  "description": "Personal Project",
+  "homepage": "https://github.com/samorag93/personal-project#readme",
+  "bugs": {
+    "url": "https://github.com/samorag93/personal-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samorag93/personal-project.git"
+  },
+  "license": "ISC",
+  "author": "Moroni Aguilar",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
