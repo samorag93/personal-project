@@ -8,27 +8,18 @@
   "host": "personal-project-cf2m.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
-  
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "API is working"
+        ],
         "description": "",
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
