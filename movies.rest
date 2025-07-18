@@ -1,0 +1,30 @@
+### Get all movies
+GET http://localhost:8080/movies
+
+### Get a single movie by ID
+GET http://localhost:8080/movies/PASTE_VALID_ID_HERE
+
+### Create a movie
+POST http://localhost:8080/movies
+Content-Type: application/json
+
+{
+  "title": "The Dark Knight",
+  "director": "Christopher Nolan",
+  "year": 2008,
+  "genre": "Action"
+}
+
+### Update a movie
+PUT http://localhost:8080/movies/6879fddd31cbd81afcef142c
+Content-Type: application/json
+
+{
+  "title": "The Dark Knight",
+  "director": "Christopher Nolan",
+  "year": "2008",
+  "genre": "Action"
+}
+
+### Delete a movie
+DELETE http://localhost:8080/movies/PASTE_VALID_ID_HERE

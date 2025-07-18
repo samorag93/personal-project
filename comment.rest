@@ -1,0 +1,21 @@
+### 🔐 Login to get JWT token
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "arya.stark@winterfell.com",
+  "password": "Needle2024!"
+}
+
+### 📝 Add a comment to a movie (authenticated)
+POST http://localhost:8080/comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODc4ZThkMTk0MzkwN2YyZTk2NmZmMDgiLCJlbWFpbCI6ImFyeWEuc3RhcmtAd2ludGVyZmVsbC5jb20iLCJpYXQiOjE3NTI4MzMwMjEsImV4cCI6MTc1MjgzNjYyMX0.hjHwpPiE48BNRIXGmwhJ_oRx10Ofp00YjHzhjIOmvZ4
+
+{
+  "comment": "Great performance by the lead actor and good actors.",
+  "movieId": "6878e530943907f2e966ff06"
+}
+
+### 📄 Get all comments for a specific movie
+GET http://localhost:8080/comments/6879fddd31cbd81afcef142c

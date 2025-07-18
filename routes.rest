@@ -1,0 +1,40 @@
+# Get all users
+GET http://localhost:8080/users
+Accept: application/json
+
+###
+
+# Get user by ID (replace the id with a valid one)
+GET http://localhost:8080/users/64b88f1e45a6cde123456789
+Accept: application/json
+
+###
+
+# Create a new user (password validated with passwordComplexityCheck)
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "firstName": "Ana",
+  "lastName": "Gomez",
+  "email": "ana.gomez@example.com",
+  "password": "Aa123456!"
+}
+
+###
+
+# Update user (replace the id with a valid one)
+PUT http://localhost:8080/users/64b88f1e45a6cde123456789
+Content-Type: application/json
+
+{
+  "firstName": "Ana Maria",
+  "lastName": "Gomez",
+  "email": "ana.gomez@example.com",
+  "password": "Bb654321!"
+}
+
+###
+
+# Delete user (replace the id with a valid one)
+DELETE http://localhost:8080/users/64b88f1e45a6cde123456789
