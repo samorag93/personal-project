@@ -5,7 +5,7 @@
     "description": "API for managing users, movies, and comments in the project",
     "version": "1.0.0"
   },
-  "host": "https://personal-project-cf2m.onrender.com",
+  "host": "personal-project-cf2m.onrender.com",
   "basePath": "/",
   "schemes": [
     "http",
