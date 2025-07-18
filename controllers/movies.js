@@ -28,11 +28,15 @@ const createMovie = async (req, res) => {
   try {
     const { title, director, year, genre } = req.body;
 
-    if (!title || !director || !year || !genre) {
-      return res.status(400).send({ message: 'All fields are required!' });
+    if (!title || typeof title !== 'string' || title.trim().length < 1 || 
+      !director || typeof director !== 'string' || director.trim().length < 1 ||
+      !genre || typeof genre !== 'string' || genre.trim().length < 1 ||
+      !year || typeof year !== 'number' || year < 1900 || year > new Date().getFullYear()
+    ) {
+      return res.status(400).send({ message: 'Invalid input: check title, director, genre, and year' });
     }
 
-    const movie = { title, director, year, genre };
+    const movie = { title: title.trim(), director: director.trim(), year, genre: genre.trim() };
     const response = await mongodb.getDatabase().db().collection('movies').insertOne(movie);
 
     if (response.acknowledged) {
@@ -52,11 +56,15 @@ const updateMovie = async (req, res) => {
     const movieId = new ObjectId(req.params.id);
     const { title, director, year, genre } = req.body;
 
-    if (!title || !director || !year || !genre) {
+    if (!title || typeof title !== 'string' || title.trim().length < 1 ||
+      !director || typeof director !== 'string' || director.trim().length < 1 ||
+      !genre || typeof genre !== 'string' || genre.trim().length < 1 ||
+      !year || typeof year !== 'number' || year < 1900 || year > new Date().getFullYear()
+    ) {
       return res.status(400).send({ message: 'All fields are required!' });
     }
 
-    const movie = { title, director, year, genre };
+    const movie = { title: title.trim(), director: director.trim(), year, genre: genre.trim() };
     const response = await mongodb.getDatabase().db().collection('movies').replaceOne({ _id: movieId }, movie);
 
     if (response.modifiedCount > 0) {
