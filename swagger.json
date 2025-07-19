@@ -408,6 +408,9 @@
     },
     "/auth/login": {
       "post": {
+        "tags": [
+          "Log in"
+        ],
         "description": "",
         "parameters": [
           {
