@@ -10,12 +10,12 @@ Content-Type: application/json
 ### 📝 Add a comment to a movie (authenticated)
 POST http://localhost:8080/comments
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODc4ZThkMTk0MzkwN2YyZTk2NmZmMDgiLCJlbWFpbCI6ImFyeWEuc3RhcmtAd2ludGVyZmVsbC5jb20iLCJpYXQiOjE3NTI4MzMwMjEsImV4cCI6MTc1MjgzNjYyMX0.hjHwpPiE48BNRIXGmwhJ_oRx10Ofp00YjHzhjIOmvZ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODc4ZThkMTk0MzkwN2YyZTk2NmZmMDgiLCJlbWFpbCI6ImFyeWEuc3RhcmtAd2ludGVyZmVsbC5jb20iLCJpYXQiOjE3NTMxMjQ1NjQsImV4cCI6MTc1MzEyODE2NH0.WM3-L6_r_kDmMo7pZ6aFwkwozy_qfLPnG2LVh7bsboM
 
 {
-  "comment": "Great performance by the lead actor and good actors.",
+  "comment": "Great performance and great movie by the lead actor and good actors.",
   "movieId": "6878e530943907f2e966ff06"
 }
 
 ### 📄 Get all comments for a specific movie
-GET http://localhost:8080/comments/6879fddd31cbd81afcef142c
+GET http://localhost:8080/comments/6878e530943907f2e966ff06

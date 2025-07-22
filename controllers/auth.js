@@ -12,7 +12,7 @@ const login = async (req, res) => {
     if (!user || user.password !== password) {
       return res.status(401).send({ message: 'Invalid email or password' });
     }
-
+    console.log('JWT_SECRET from env:', process.env.JWT_SECRET);
     const token = jwt.sign(
       { userId: user._id, email: user.email },
       process.env.JWT_SECRET,
